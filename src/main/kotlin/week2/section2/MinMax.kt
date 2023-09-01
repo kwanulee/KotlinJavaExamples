@@ -7,8 +7,4 @@ fun main() {
     println("Long min: " + Long.MIN_VALUE + " max: " + Long.MAX_VALUE)
     println("Float min: " + Float.MIN_VALUE + " max: " + Float.MAX_VALUE)
     println("Double min: " + Double.MIN_VALUE + " max: " + Double.MAX_VALUE)
-
-    var a: Byte = 127
-    a = (a + 2).toByte()
-    println(a)
 }
