@@ -1,6 +1,6 @@
 package week4.section1;
 
-public class WhenStatementExpression {
+public class SwitchStatementExpression {
     public static void main(String[] args) {
         int month = 5;
         switch (month) {
