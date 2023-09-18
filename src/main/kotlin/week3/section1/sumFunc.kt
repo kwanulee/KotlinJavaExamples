@@ -11,4 +11,9 @@ fun main(){
 
     println(result1)
     println(result2)
+
+    var total: Int = 0
+
+    for (num in 1..100 step 2) total += num
+    println("Odd total: $total")
 }
