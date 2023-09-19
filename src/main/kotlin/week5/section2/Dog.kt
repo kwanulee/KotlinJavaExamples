@@ -7,8 +7,6 @@ class Dog { // ① 클래스의 정의
     var name: String? = null
     var age: Int = 0
 
-    constructor() {}
-
     // ③ 메서드들(함수)
     fun bark() {
         println("$name(이/가)  짖고 있습니다.")
