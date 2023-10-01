@@ -21,7 +21,7 @@ fun main() {
     println("나이= ${aDog.age}")
 
     println("\n객체생성 요청: Dog(\"진도개2\",null,100)")
-    val bDog = Dog("진도개2",null,100)
+    val bDog = Dog("소나무",null,100)
     println("종류= ${bDog.type}")
     println("이름= ${bDog.name}")
     println("나이= ${bDog.age}")

@@ -6,9 +6,18 @@ class Dog {
     var age: Int
 
     constructor(type:String, name:String?, age:Int) {
-        this.type = type;
-        this.name = name;
-        this.age = age;
+//        this.type = type;
+//        this.name = name;
+//        this.age = age;
+        this.type = if (type!="삽살개" && type!="진도개" && type!="Dog") {
+            println("${type} is an invalid type!!: Dog 로 초기화")
+            "Dog"
+        } else type
+        this.name = name ?: "noName"
+        this.age = if (age !in 0..30) {
+            println("${age} is an invalid age!!: 0으로 초기화")
+            0
+        } else age
     }
 
     constructor(type:String, age:Int): this(type, "noName", age)
