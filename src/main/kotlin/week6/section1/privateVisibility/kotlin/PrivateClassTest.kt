@@ -8,7 +8,7 @@ private class PrivateClass {
 }
 
 class OtherClass {
-    //val pc = PrivateClass()  // 프로퍼티 지정시 private로 선언해야함
+    private val pc = PrivateClass()  // 프로퍼티 지정시 private로 선언해야함
     fun test() {
         val pc = PrivateClass() // 생성 가능
     }

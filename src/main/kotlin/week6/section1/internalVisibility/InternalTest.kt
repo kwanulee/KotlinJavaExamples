@@ -1,6 +1,6 @@
 package week6.section1.internalVisibility
 
-internal class InternalClass {
+ class InternalClass {
     internal var i = 1
     internal fun icFunc() {
         i += 1 // 접근 허용

@@ -14,10 +14,10 @@ class User(_id: Int, _name: String, _age: Int) {
         }
 
     var age: Int = _age
-        get() = field
-        set(value) {
-            field = value
-        }
+//        get() = field
+//        set(value) {
+//            field = value
+//        }
 }
 
 fun main() {

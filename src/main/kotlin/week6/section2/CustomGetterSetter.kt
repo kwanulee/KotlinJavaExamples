@@ -17,6 +17,7 @@ class User(_id: Int, _name: String, _age: Int) {
 
 fun main() {
     val user1 = User(1, "kildong", 35)
+
     user1.name = "coco"
     println("user3.name = ${user1.name}")
     //user1.age = 36    // 외부에서 변경할 수 없음

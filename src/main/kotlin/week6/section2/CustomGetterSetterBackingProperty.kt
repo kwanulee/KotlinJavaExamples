@@ -11,7 +11,7 @@ class User(_id: Int, _name: String, _age: Int) {
     private var _givenName: String? = null
     private var _familyName: String? = null
 
-    var name:String = _name             // 프로퍼티 초기화
+    var name:String =""             // 프로퍼티 초기화
         get() {
             if (_familyName==null)
                 return field.uppercase(Locale.getDefault())
@@ -26,55 +26,18 @@ class User(_id: Int, _name: String, _age: Int) {
                 _givenName = value.split(" ").get(1)
             }
         }
+
+    init {
+        name = _name
+    }
 }
 
-//class User(_id: Int, _name: String, _age: Int, _country:String) {
-//    val id: Int = _id
-//    var age: Int = _age
-//    var country:String = _country
-//
-//    private var _givenName: String? = null
-//    private var _familyName: String? = null
-//
-//    var name:String = _name
-//        get() {
-//            if (_familyName==null)
-//                return _givenName!!
-//            else
-//                return when(country) {
-//                    "CN", "JP", "KR" -> "$_familyName $_givenName" // 동양 국가
-//                    else -> "$_givenName $_familyName" // 기본값 (다른 국가)
-//                }
-//        }
-//        set(value) {
-//            println("The name was changed")
-//            field = value
-//            if (value.split(" ").count()==1) {
-//                _givenName = value
-//                _familyName = null
-//            } else {
-//                when (country) {
-//                    "CN", "JP", "KR" -> { // 동양 국가
-//                        _familyName = value.split(" ").get(0)
-//                        _givenName = value.split(" ").get(1)?.uppercase(Locale.getDefault())
-//                    }
-//
-//                    else -> { // 기본값 (다른 국가)
-//                        _givenName = value.split(" ").get(0)
-//                        _familyName = value.split(" ").get(1)?.uppercase(Locale.getDefault())
-//                    }
-//                }
-//            }
-//        }
-//
-//}
-
 fun main() {
-    val user1 = User(1, "Kwanwoo Lee", 35)
+    val user1 = User(1, "Lee Kwanwoo", 35)
     println("user1.name = ${user1.name}")
     val user2 = User(2, "John", 30)
     println("user2.name = ${user2.name}")
-    user2.name = "David"
+    user2.name = "Lee David"
     println("user2.name = ${user2.name}")
 
 }
