@@ -1,19 +1,17 @@
 package week7.section1.implicitConstructorCall
 
 open class A {
-    constructor() {
-        println("생성자 A : no parameter")
-    }
+
     constructor(x:Int) {
         println("생성자 A  with  parameter x")
     }
 }
 
 class B : A {
-    constructor() {
+    constructor() :super(1){
         println("생성자 B  with  no parameter")
     }
-    constructor(x:Int) {
+    constructor(x:Int) :super(x){
         println("생성자 B with  parameter x")
     }
 

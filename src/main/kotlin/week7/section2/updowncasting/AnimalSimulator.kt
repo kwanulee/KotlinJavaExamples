@@ -6,22 +6,22 @@ open class Animal(
     protected val age: Int
 ) {
 
-    fun eat() = println("${age}세의 ${type}인 ${name} +(이/가) 식사 중입니다")
-    fun sleep() = println("${age}세의 ${type}인 ${name} +(이/가) 잠자는 중입니다")
-    fun move() = println("${age}세의 ${type}인 ${name} +(이/가) 이동 중입니다")
+    fun eat() = println("${age}세의 ${type}인 ${name} (이/가) 식사 중입니다")
+    fun sleep() = println("${age}세의 ${type}인 ${name} (이/가) 잠자는 중입니다")
+    fun move() = println("${age}세의 ${type}인 ${name} (이/가) 이동 중입니다")
 }
 
 class Dog(type: String, name: String, age: Int) : Animal(type, name, age) {
-    fun bark() = println("${age}세의 ${type}인 ${name} + (이/가) 짖고 있습니다")
+    fun bark() = println("${age}세의 ${type}인 ${name} (이/가) 짖고 있습니다")
 }
 
 class Cat(type: String, name: String, age: Int) : Animal(type, name, age) {
-    fun meow() = println("${age}세의 ${type}인 ${name} + (이/가) 야옹하고 있습니다")
+    fun meow() = println("${age}세의 ${type}인 ${name}  (이/가) 야옹하고 있습니다")
 }
 
 class Duck(type: String, name: String, age: Int) : Animal(type,name,age) {
-    fun quack() = println("${age}세의 ${type}인 ${name} + (이/가) 꽥꽥하고 있습니다")
-    fun swim() = println("${age}세의 ${type}인 ${name} + (이/가) 수영하고 있습니다")
+    fun quack() = println("${age}세의 ${type}인 ${name} (이/가) 꽥꽥하고 있습니다")
+    fun swim() = println("${age}세의 ${type}인 ${name} (이/가) 수영하고 있습니다")
 }
 
 fun main() {

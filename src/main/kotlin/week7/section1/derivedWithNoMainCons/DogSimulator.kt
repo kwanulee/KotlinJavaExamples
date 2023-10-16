@@ -5,15 +5,15 @@ open class Animal (protected var type: String,
                    protected var name: String,
                    protected val age: Int){
 
-    fun eat() = println("${age}세의 ${type}인 ${name} +(이/가) 식사 중입니다")
-    fun sleep() = println("${age}세의 ${type}인 ${name} +(이/가) 잠자는 중입니다")
-    fun move() = println("${age}세의 ${type}인 ${name} +(이/가) 이동 중입니다")
+    fun eat() = println("${age}세의 ${type}인 ${name} (이/가) 식사 중입니다")
+    fun sleep() = println("${age}세의 ${type}인 ${name} (이/가) 잠자는 중입니다")
+    fun move() = println("${age}세의 ${type}인 ${name} (이/가) 이동 중입니다")
 }
 
 class Dog : Animal {
     constructor(type:String, age:Int) : this (type,"noName",age)
     constructor(type: String, name: String, age: Int) : super(type,name,age)
-    fun bark() = println("${age}세의 ${type}인 ${name} + (이/가) 짖고 있습니다")
+    fun bark() = println("${age}세의 ${type}인 ${name} (이/가) 짖고 있습니다")
 }
 
 fun main() {

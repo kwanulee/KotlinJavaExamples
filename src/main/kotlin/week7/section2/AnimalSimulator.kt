@@ -4,22 +4,22 @@ open class Animal (protected var type: String,
                    protected var name: String,
                    protected val age: Int){
 
-    fun eat() = println("${age}세의 ${type}인 ${name} +(이/가) 식사 중입니다")
-    fun sleep() = println("${age}세의 ${type}인 ${name} +(이/가) 잠자는 중입니다")
-    fun move() = println("${age}세의 ${type}인 ${name} +(이/가) 이동 중입니다")
+    fun eat() = println("${age}세의 ${type}인 ${name} (이/가) 식사 중입니다")
+    fun sleep() = println("${age}세의 ${type}인 ${name} (이/가) 잠자는 중입니다")
+    fun move() = println("${age}세의 ${type}인 ${name} (이/가) 이동 중입니다")
 }
 
 class Dog(type: String, name: String, age: Int) : Animal(type,name,age) {
-    fun bark() = println("${age}세의 ${type}인 ${name} + (이/가) 짖고 있습니다")
+    fun bark() = println("${age}세의 ${type}인 ${name} (이/가) 짖고 있습니다")
 }
 
 class Cat(type: String, name: String, age: Int) : Animal(type,name,age) {
-    fun meow() = println("${age}세의 ${type}인 ${name} + (이/가) 야옹하고 있습니다")
+    fun meow() = println("${age}세의 ${type}인 ${name} (이/가) 야옹하고 있습니다")
 }
 
 class Duck(type: String, name: String, age: Int) : Animal(type,name,age) {
-    fun quack() = println("${age}세의 ${type}인 ${name} + (이/가) 꽥꽥하고 있습니다")
-    fun swim() = println("${age}세의 ${type}인 ${name} + (이/가) 수영하고 있습니다")
+    fun quack() = println("${age}세의 ${type}인 ${name} (이/가) 꽥꽥하고 있습니다")
+    fun swim() = println("${age}세의 ${type}인 ${name} (이/가) 수영하고 있습니다")
 }
 
 fun main() {
@@ -28,7 +28,7 @@ fun main() {
 
     for (i in 1..5) {
         val dogChoice = (Math.random() * 2 + 1).toInt()
-        val dog = if (dogChoice == 1) aDog else bDog
+        val dog:Dog = if (dogChoice == 1) aDog else bDog
         val dogAction = (Math.random() * 4 + 1).toInt()
         when (dogAction) {
             1 -> dog.bark()
@@ -43,7 +43,7 @@ fun main() {
 
     for (i in 1..5) {
         val catChoice = (Math.random() * 2 + 1).toInt()
-        val cat = if (catChoice == 1) aCat else bCat
+        val cat:Cat = if (catChoice == 1) aCat else bCat
         val catAction = (Math.random() * 4 + 1).toInt()
         when (catAction) {
             1 -> cat.meow()
@@ -58,7 +58,7 @@ fun main() {
 
     for (i in 1..5) {
         val duckChoice = (Math.random() * 2 + 1).toInt()
-        val duck = if (duckChoice == 1) aDuck else bDuck
+        val duck:Duck = if (duckChoice == 1) aDuck else bDuck
         val duckAction = (Math.random() * 5 + 1).toInt()
         when (duckAction) {
             1 -> duck.quack()
