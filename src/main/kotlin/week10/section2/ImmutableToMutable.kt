@@ -7,4 +7,7 @@ fun main() {
     val mutableNames = names.toMutableList()  // 새로운 가변형 List 가 만들어짐
     mutableNames.add("four")
     println(mutableNames)
+    println(names)
+    mutableNames.add("five")
+    println(mutableNames)
 }

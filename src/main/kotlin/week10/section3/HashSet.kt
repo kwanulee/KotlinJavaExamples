@@ -6,4 +6,9 @@ fun main() {
     intsHashSet.add(5)
     intsHashSet.remove(6)
     println(intsHashSet)
+
+    val strHashSet = hashSetOf("bbb", "aaa", "ccc")
+    strHashSet.add("aaa")
+    println(strHashSet)
+
 }
